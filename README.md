@@ -112,6 +112,9 @@ Each insert into `outbox_events` sends a new message to
 
 Use pgAdmin 4 at http://localhost:8889.
 
+<details>
+<summary>pgAdmin credentials and connection settings</summary>
+
 Sign in with the following credentials.
 
 Email
@@ -161,6 +164,8 @@ local_app_password
 ```
 
 Select `Save`.
+
+</details>
 
 ## The relay contract
 
