@@ -1,8 +1,8 @@
 # PostgreSQL Outbox Debezium Demo
 
-A local CDC demo for a job-processing service. The application writes a job
-state change and an integration event in one PostgreSQL transaction. Debezium
-then relays committed outbox events to Kafka.
+- Local CDC demo for a job-processing service.
+- The application writes a job state change and integration event in one PostgreSQL transaction.
+- Debezium relays committed outbox events to Kafka.
 
 ```mermaid
 flowchart LR
@@ -24,8 +24,7 @@ flowchart LR
 
 ## Prerequisites
 
-Install Docker Desktop or [OrbStack](https://orbstack.dev/download) before
-running the demo.
+- Install Docker Desktop or [OrbStack](https://orbstack.dev/download) before running the demo.
 
 ## Run the demo
 
