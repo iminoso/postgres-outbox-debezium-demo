@@ -110,9 +110,20 @@ COMMIT;
 Browse Kafka UI at http://localhost:8888 and inspect
 `outbox.event.worker_job`.
 
-Adminer provides a PostgreSQL browser at http://localhost:8889. Select
-`PostgreSQL`, then sign in with server `database`, user `app_user`, password
-`local_app_password`, and database `worker_service`.
+Use pgAdmin 4 at http://localhost:8889.
+
+- Sign in with:
+  - Email: `admin@example.com`
+  - Password: `local_pgadmin_password`
+- Select `Add New Server`.
+- On the `General` tab, enter a server name such as `worker_service`.
+- On the `Connection` tab, enter:
+  - Host name/address: `database`
+  - Port: `5432`
+  - Maintenance database: `worker_service`
+  - Username: `app_user`
+  - Password: `local_app_password`
+- Select `Save`.
 
 ## The relay contract
 

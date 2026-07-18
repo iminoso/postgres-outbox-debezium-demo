@@ -27,14 +27,15 @@ services:
       retries: 10
 
   database-ui:
-    image: adminer:4.8.1-standalone
+    image: dpage/pgadmin4:9.1
     networks: [demo-network]
     depends_on:
       database:
         condition: service_healthy
-    ports: ["8889:8080"]
+    ports: ["8889:80"]
     environment:
-      ADMINER_DEFAULT_SERVER: database
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: local_pgadmin_password
 
   broker:
     image: confluentinc/cp-kafka:7.7.1
