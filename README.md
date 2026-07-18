@@ -107,8 +107,8 @@ VALUES (
 COMMIT;
 ```
 
-Browse Kafka UI at http://localhost:8888 and inspect
-`outbox.event.worker_job`.
+Each insert into `outbox_events` sends a new message to
+[`outbox.event.worker_job`](http://localhost:8888/ui/clusters/postgres-outbox-demo/all-topics/outbox.event.worker_job/messages?filterQueryType=STRING_CONTAINS&attempt=2&limit=100&page=0&seekDirection=TAILING&keySerde=String&valueSerde=String&seekType=LATEST) after the transaction commits.
 
 Use pgAdmin 4 at http://localhost:8889.
 
