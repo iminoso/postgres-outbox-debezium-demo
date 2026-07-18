@@ -112,18 +112,55 @@ Browse Kafka UI at http://localhost:8888 and inspect
 
 Use pgAdmin 4 at http://localhost:8889.
 
-- Sign in with:
-  - Email: `admin@example.com`
-  - Password: `local_pgadmin_password`
-- Select `Add New Server`.
-- On the `General` tab, enter a server name such as `worker_service`.
-- On the `Connection` tab, enter:
-  - Host name/address: `database`
-  - Port: `5432`
-  - Maintenance database: `worker_service`
-  - Username: `app_user`
-  - Password: `local_app_password`
-- Select `Save`.
+Sign in with the following credentials.
+
+Email
+```text
+admin@example.com
+```
+
+Password
+```text
+local_pgadmin_password
+```
+
+Select `Add New Server`.
+
+On the `General` tab, enter a server name.
+
+Name
+```text
+worker_service
+```
+
+On the `Connection` tab, enter the following settings.
+
+Host name/address
+```text
+database
+```
+
+Port
+```text
+5432
+```
+
+Maintenance database
+```text
+worker_service
+```
+
+Username
+```text
+app_user
+```
+
+Password
+```text
+local_app_password
+```
+
+Select `Save`.
 
 ## The relay contract
 
