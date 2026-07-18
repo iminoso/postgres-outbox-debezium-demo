@@ -1,0 +1,21 @@
+{
+  "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+  "tasks.max": "1",
+  "database.hostname": "database",
+  "database.port": "5432",
+  "database.user": "cdc_reader",
+  "database.password": "cdc_reader_password",
+  "database.dbname": "worker_service",
+  "topic.prefix": "worker-service",
+  "schema.include.list": "public",
+  "table.include.list": "public.outbox_events",
+  "plugin.name": "pgoutput",
+  "slot.name": "worker_outbox_slot",
+  "publication.name": "worker_outbox_publication",
+  "publication.autocreate.mode": "disabled",
+  "tombstones.on.delete": "false",
+  "transforms": "outbox",
+  "transforms.outbox.type": "io.debezium.transforms.outbox.EventRouter",
+  "transforms.outbox.table.field.event.key": "aggregate_id",
+  "transforms.outbox.route.by.field": "aggregate_type"
+}
